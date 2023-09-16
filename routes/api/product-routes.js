@@ -15,14 +15,16 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
+
+// *
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
+      "product_name": "Basketball",
+      "price": 200.00,
+      "stock": 3,
+      "tagIds": [1, 2, 3, 4]
     }
   */
   Product.create(req.body)
@@ -92,6 +94,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// *
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
 });
